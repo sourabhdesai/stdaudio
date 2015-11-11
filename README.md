@@ -13,6 +13,6 @@ Takes PCM data from stdin, plays it on your speaker
     -s, --samplerate <n>  samplerate of audio data
 
 ## Example
-`cat test/NXCAM_Guitar_audio_demo_v2.wav | node bin/stdaudio`
+`cat test/NXCAM_Guitar_audio_demo_v2.wav | node stdaudio`
 
 The above will start playing the wav file on the local device's speakers.
