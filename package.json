@@ -1,6 +1,6 @@
 {
   "name": "stdaudio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Takes PCM data from stdin, plays it on your speaker",
   "main": " ",
   "scripts": {
