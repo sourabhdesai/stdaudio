@@ -1,0 +1,32 @@
+{
+  "name": "stdaudio",
+  "version": "1.0.0",
+  "description": "Takes PCM data from stdin, plays it on your speaker",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sourabhdesai@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "keywords": [
+    "stdin",
+    "pcm",
+    "play",
+    "music",
+    "audio",
+    "stream",
+    "pipe"
+  ],
+  "bin": "bin/stdaudio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sourabhdesai/stdaudio.git"
+  },
+  "files": [
+    "bin",
+    "package.json"
+  ]
+}

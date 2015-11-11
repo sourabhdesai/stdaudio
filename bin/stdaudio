@@ -1,0 +1,39 @@
+#! /usr/bin/env node
+'use strict';
+
+process.bin = process.title = 'stdaudio';
+
+var packageInfo = require('../package.json');
+var Speaker     = require('speaker');
+var program     = require('commander');
+
+var opts = { // Prepoulated with defaults
+  channels: 2,          // 2 channels
+  bitDepth: 16,         // 16-bit samples
+  sampleRate: 44100     // 44,100 Hz sample rate
+};
+
+function setChannels(channels) {
+	opts.channels = parseInt(channels);
+}
+
+function setBitDepth(bitDepth) {
+	opts.bitDepth = parseInt(bitDepth);
+}
+
+function setSampleRate(sampleRate) {
+	opts.sampleRate = parseInt(sampleRate);
+}
+
+program
+	.version(packageInfo.version)
+	.option('-c, --channels <n>', 'number of channels in audio data', setChannels, opts.channels)
+	.option('-b, --bitdepth <n>', 'bit depth of audio data', setBitDepth, opts.bitDepth)
+	.option('-s, --samplerate <n>', 'samplerate of audio data', setSampleRate, opts.sampleRate)
+	.parse(process.argv);
+
+// Create the Speaker instance
+var speaker = new Speaker(opts);
+
+// PCM data from stdin gets piped into the speaker
+process.stdin.pipe(speaker);
