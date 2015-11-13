@@ -1,6 +1,9 @@
 # stdaudio
 Takes PCM data from stdin, plays it on your speaker
 
+## Installation
+`npm install -g stdaudio`
+
 ## Usage
     Usage: stdaudio [options]
 
